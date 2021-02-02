@@ -1,0 +1,40 @@
+.topHeader {
+    text-align: center;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    color: #3D3D3D;
+    font-size: 2.3em;
+}
+
+.subHeader {
+    text-align: center;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    color: #707070;
+    font-size: 1.5em;
+}
+
+.section {
+    margin-left: 20%;
+    margin-right: 20%;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+}
+
+hr {
+    background: #3D3D3D;
+    height: 0.1em;
+}
+
+.sectionHeader {
+    text-align: left;
+    color: #3D3D3D;
+    font-size: 1.25em;
+    margin-bottom: 0.2em;
+}
+
+.courses {
+    font-size: 1.3em;
+    color: #707070;
+}
+
+li:not(:last-child) {
+    margin-bottom: 1.2em;
+}
