@@ -2,7 +2,7 @@
 $email = $_POST["email"];
 $pass = $_POST ["password"];
 
-$connection = mysql_connect(?,?,?)
+$connection = mysql_connect(?,"dh_rpwwdr","R3t3n@dm1n");
 
 mysql_select_db("retentionapp",$con);
 
