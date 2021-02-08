@@ -2,16 +2,22 @@
 $email = $_POST["email"];
 $pass = $_POST ["password"];
 
-$connection = mysql_connect(?,"dh_rpwwdr","R3t3n@dm1n");
+//Attempts to connect to database using mysqli
+//Still need to figure out database location
+$connection = new mysqli(?,"dh_rpwwdr","R3t3n@dm1n,retentionapp");
 
-mysql_select_db("retentionapp",$con);
+//Check connection to database
+if ($connection -> connect_errno) {
+    echo "Failed to connect to MySQL: " . $connection -> connect_error;
+    exit();
+  }
 
-$result = mysql_query("Select ?, ?, ?");
+$result = mysql_query("Select teacherName, teacherPass, teacherEmail");
 
 $row = mysql_fetch_array($result);
 
 if($row["email"]==$email && $row["password"]==$pass)
-    echo"You are a validated user.";
+    echo"Login Successful.";
 else
-    echo"Sorry, your credentials are not valid, Please try again.";
+    echo"Sorry, login failed. Please try again.";
 ?>
