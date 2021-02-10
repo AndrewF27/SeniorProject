@@ -4,7 +4,7 @@ $pass = $_POST ["password"];
 
 //Attempts to connect to database using mysqli
 //Still need to figure out database location
-$connection = new mysqli(?,"dh_rpwwdr","R3t3n@dm1n,retentionapp");
+$connection = new mysqli("localhost","dh_rpwwdr","R3t3n@dm1n,retentionapp_login");
 
 //Check connection to database
 if ($connection -> connect_errno) {
