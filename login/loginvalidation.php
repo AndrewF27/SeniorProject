@@ -1,23 +1,28 @@
 <?php
-$email = $_POST["email"];
-$pass = $_POST ["password"];
+$email = $_POST["teacherEmail"];
+$pass = $_POST["teacherPass"];
+ini_set('display_errors', 1);
 
 //Attempts to connect to database using mysqli
 //Still need to figure out database location
-$connection = new mysqli("localhost","retentionadmin","R3t3n@dm1n,retentionapp_login");
+$connection = new mysqli ("mysql.retentionapp.club","retentionadmin","R3t3n@dm1n");
 
 //Check connection to database
 if ($connection -> connect_errno) {
     echo "Failed to connect to MySQL: " . $connection -> connect_error;
     exit();
   }
+ //select database
+  mysqli_select_db($connection,"retentionapp_login");
 
-$result = mysql_query("Select teacherName, teacherPass, teacherEmail");
+$result = mysqli_query($connection, "SELECT * FROM teacher_login WHERE teacherEmail = '$email' and teacherPass = '$pass'");
 
-$row = mysql_fetch_array($result);
-
-if($row["email"]==$email && $row["password"]==$pass)
+$rows = mysqli_num_rows($result);
+if($rows == 1) {
     echo"Login Successful.";
-else
+}
+else{
     echo"Sorry, login failed. Please try again.";
+}
+    
 ?>
