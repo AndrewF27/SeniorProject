@@ -19,6 +19,7 @@ $result = mysqli_query($connection, "SELECT * FROM teacher_login WHERE teacherEm
 
 $rows = mysqli_num_rows($result);
 if($rows == 1) {
+    header("Location: http://retentionapp.club/instructorDashboard.html");
     echo"Login Successful.";
 }
 else{
