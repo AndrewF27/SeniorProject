@@ -1,0 +1,39 @@
+
+    <!DOCTYPE html>
+<html>
+
+    <head>
+        <link rel="stylesheet" href="../CSS/pages.css">
+    </head>
+
+<meta charset= "UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<body>
+<p class="topHeader">Welcome to Retention!</p>
+
+<p class="topHeader">. . .</p>
+
+<p class="subHeader">Please Sign In</p>
+
+<div class="logIcon">
+    <a href="login.html">
+        <img id="nonIcon" src="../images/SPTeacherIcon.png" alt="Instructor Login Icon">
+    </a>
+    <img id="selectedIcon" src="../images/SPStudentIcon.png" alt="Student Login Icon">
+</div>
+
+    <form class="loginField" actions= "" method="POST" action="loginvalidation.php">
+<div class="logincontainer">
+    <label for="teacherEmail"><b>Email</b></label>
+    <input type="text" placeholder="Enter email" id="teacherEmail" name="teacherEmail" required>
+
+    <label for="teacherPass"><b>Password</b></label>
+    <input type="password" placeholder="Enter Username" id="teacherPass" name="teacherPass" required>
+    
+    <input type="submit" value="Login" name="submit">Login</input>
+    
+</div>
+</form>
+</body>
+</html>

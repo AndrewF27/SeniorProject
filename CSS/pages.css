@@ -1,3 +1,5 @@
+/*For all pages to reference*/
+/*Text Types*/
 .topHeader {
     text-align: center;
     font-family: Arial, Arial, Helvetica, sans-serif;
@@ -12,6 +14,11 @@
     font-size: 1.5em;
 }
 
+.text {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #3D3D3D;
+    font-size: 1em;
+}
 .section {
     margin-left: 20%;
     margin-right: 20%;
@@ -37,4 +44,69 @@ hr {
 
 li:not(:last-child) {
     margin-bottom: 1.2em;
+}
+
+/*landingpage*/
+
+.column {
+    margin-left: 19%;
+    display: inline-block;
+    width: 20%;
+}
+
+img.column {
+    width: 85%;
+    height: auto;
+}
+
+p.column {
+    width: 85%;
+    color:#3D3D3D;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+/*loginpages*/
+
+div.logIcon {
+    width: 33.3%;
+    height: auto;
+    display: inline-block;
+}
+
+#nonIcon {
+    width: 15%;
+    height: auto;
+}
+
+#selectedIcon {
+    width: 50%;
+    height: auto;
+}
+
+div.logincontainer {
+    width:10%;
+    height: auto;
+    display: inline-block;
+}
+
+div.logincontainer > input {
+    width: 100%;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    margin: 8px 0;
+    cursor: pointer;
+}
+
+div.logincontainer > label {
+    width: 100%;
+    color: #3D3D3D;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    margin: 8px 0;
+    cursor: pointer;
 }
