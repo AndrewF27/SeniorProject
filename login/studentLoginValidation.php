@@ -1,6 +1,6 @@
 <?php
-$email = $_POST["teacherEmail"];
-$pass = $_POST["teacherPass"];
+$email = $_POST["studentEmail"];
+$pass = $_POST["studentPass"];
 ini_set('display_errors', 1);
 
 //Attempts to connect to database using mysqli
@@ -15,10 +15,11 @@ if ($connection -> connect_errno) {
  //select database
   mysqli_select_db($connection,"retentionapp_login");
 
-$result = mysqli_query($connection, "SELECT * FROM teacher_login WHERE teacherEmail = '$email' and teacherPass = '$pass'");
+$result = mysqli_query($connection, "SELECT * FROM student_login WHERE studentEmail = '$email' and studentPass = '$pass'");
 
 $rows = mysqli_num_rows($result);
 if($rows == 1) {
+    header("Location: http://retentionapp.club/studentDashboard.html");
     echo"Login Successful.";
 }
 else{
