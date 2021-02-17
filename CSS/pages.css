@@ -93,7 +93,7 @@ div.logincontainer {
 
 div.logincontainer > input {
     width: 100%;
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 14px 20px;
     border: none;
     border-radius: 4px;
