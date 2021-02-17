@@ -27,7 +27,6 @@ questionGen();
 //document.getElementById("question").innerHTML = randomWord;
 //Question & Answer Generation
 
-<<<<<<< HEAD
 function button() {
 var answer = prompt("");
 var answer1 = "Correct! The word "
@@ -45,22 +44,6 @@ else {
 
 }
 
-=======
-function answerGen() {
-    var question1 = "How many times does the word ";
-    var question2 = " appear in the test text?";
-    var questionTotal = question1.concat(randomWord, question2);
-    document.getElementById("after").innerHTML = questionTotal;
-
-    var answer1 = "The word "
-    var answer2 = " appears "
-    var answer3 = " time(s)!"
-    var answerTotal = answer1.concat(randomWord, answer2, randomWordCount, answer3);
-    document.getElementById("test").innerHTML = answerTotal;
-}
-
-answerGen();
->>>>>>> a6cce79d8d06b9dce43bb79fae59ef03d602559b
 
 //Awarding Points
 var studentResponse = 0;
