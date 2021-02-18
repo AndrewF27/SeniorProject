@@ -25,11 +25,22 @@ var question2 = " appear in the test text?";
 var questionTotal = question1.concat(randomWord, question2);
 document.getElementById("after").innerHTML = questionTotal;
 
-var answer1 = "The word "
-var answer2 = " appears "
-var answer3 = " time(s)!"
-var answerTotal = answer1.concat(randomWord, answer2, randomWordCount, answer3);
-document.getElementById("test").innerHTML = answerTotal;
+function button() {
+    var answer = prompt("");
+    var answer1 = "Correct! The word "
+    var answer2 = " appears "
+    var answer3 = " time(s)!"
+    var answer4 = "Incorrect! The word "
+    var answerTotal = answer1.concat(randomWord, answer2, randomWordCount, answer3);
+    var answerTotal2 = answer4.concat(randomWord, answer2, randomWordCount, answer3);
+    if (answer == randomWordCount) {
+        document.getElementById("test").innerHTML = answerTotal;
+    } 
+    else {
+        document.getElementById("test").innerHTML = answerTotal2;
+    }
+    
+}
 
 //Awarding Points
 var studentResponse = 0;
