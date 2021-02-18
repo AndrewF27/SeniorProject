@@ -2,11 +2,8 @@
 var testText = "This is a test test test sentence sentence to test the text text sifting and quiz quiz algorithm creation algorithm";
 
 document.getElementById("question").innerHTML = testText;
-//document.getElementById("question").innerHTML = testTextSplit;
 
 var testTextSplit = testText.split(" ");
-//document.getElementById("after").innerHTML = testTextSplit;
-//document.write(testTextSplit);
 
 //String Sifter
 function questionGen() {
@@ -22,7 +19,6 @@ document.write(randomWordCount)*/
     }
 }
 
-questionGen();
 //document.write(randomWordCount);
 //document.getElementById("question").innerHTML = randomWord;
 //Question & Answer Generation
@@ -51,6 +47,9 @@ var score = 0;
 var questionNumber = 0;
 if (studentResponse == randomWordCount) {
     score++;
+}
+else {
+    document.write("Oops, incorrect!");
 }
 //Page Refreshing
 
