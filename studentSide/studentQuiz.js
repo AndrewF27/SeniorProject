@@ -48,3 +48,14 @@ while (quizActive != 1) {
     location.reload()
 }
 */
+
+function changestring(){
+    testText = document.getElementById("quiztext").value;
+    return;
+    }
+
+function testdisplay(teststring) {
+    
+    window.alert(teststring);
+    return;
+}
