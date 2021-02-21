@@ -29,7 +29,7 @@ for (j = 0; j < questionCount; j++) {
     var question2 = "' appear in the test text?";
     var questionTotal = question1.concat(randomWord, question2);
     questionBank.push(questionTotal);
-    //document.getElementById("after").innerHTML = questionBank;
+    //document.getElementById("after").innerHTML = questionBank sfadsfsadf;
 
     var answer1 = "The word ";
     var answer2 = " appears ";
