@@ -4,7 +4,6 @@ $pass = $_POST["studentPass"];
 ini_set('display_errors', 1);
 
 //Attempts to connect to database using mysqli
-//Still need to figure out database location
 $connection = new mysqli ("mysql.retentionapp.club","retentionadmin","R3t3n@dm1n");
 
 //Check connection to database
