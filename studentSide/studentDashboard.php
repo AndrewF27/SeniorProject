@@ -5,6 +5,15 @@
         <link rel="stylesheet" href="../CSS/pages.css">
         <script src="studentQuiz.js">
         </script>
+        <?php
+        session_start();
+
+        if ( isset( $_SESSION['user_id'])) {
+        }
+        else {
+            header("Location: ../login/studentLogin.html")
+        }
+        ?>
     </head>
 <meta charset= "UTF-8">
 
@@ -27,7 +36,21 @@
 
     <p id="question"></p>
     <p id="after"></p>
+    
     <button onclick="button()">Click here to answer</button>
+    <form>
+        <label for="studentAnswer">Submission</label>
+        <br>
+        <input type="text" id="studentAnswer" name="studentAnswer">
+        <br>
+    </form>
+
+    <button onclick="previous()">previous</button>
+    <button onclick="next()">next</button>
+    <br>
+    <button onclick="submit()">submit</button>
+
+    <p id="score"></p>
     <p id="test"></p>
     
     <script src="studentQuiz.js">
