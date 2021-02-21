@@ -52,6 +52,7 @@
 
     <p id="score"></p>
     <p id="test"></p>
+    <p id="score"></p>
     
     <script src="studentQuiz.js">
     </script>
