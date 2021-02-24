@@ -23,12 +23,12 @@ for (i = 0; i < testTextSplit.length; i++) {
 var question1 = "How many times does the word ";
 var question2 = " appear in the test text?";
 var questionTotal = question1.concat(randomWord, question2);
-document.getElementById("after").innerHTML = questionTotal;
+
 
 var score = 0;
 
 function button() {
-    var answer = prompt("");
+    var answer = prompt(questionTotal);
     var answer1 = "Correct! The word "
     var answer2 = "Incorrect! The word "
     var answer3 = " appears "
