@@ -11,8 +11,11 @@
         if ( isset( $_SESSION['user_id'])) {
         }
         else {
-            header("Location: ../login/studentLogin.html")
+            header("Location:http://retentionapp.club/login/studentLogin.html")
         }
+        ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
         ?>
     </head>
 <meta charset= "UTF-8">
@@ -57,5 +60,7 @@
     <script src="studentQuiz.js">
     </script>
     
+
+
 </body>
 </html>
