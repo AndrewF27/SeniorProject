@@ -5,6 +5,11 @@ document.getElementById("question").innerHTML = testText;
 
 var testTextSplit = testText.split(" "); //Makes each word in 'testText' an item in an array
 
+function exporttext (exported) {
+testText = exported;
+    return;
+}
+
 //Question Number Variables
 var questionCount = 4; //number of questions/ answers generated
 var questionNumber = 0; //current question number (e.g. Question 1, Question 1... etc.)

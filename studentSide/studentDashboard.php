@@ -56,5 +56,6 @@
     
     <script src="studentQuiz.js">
     </script>
+    
 </body>
 </html>
