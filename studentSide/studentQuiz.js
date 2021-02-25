@@ -10,7 +10,6 @@ testText = exported;
     return;
 }
 
-<<<<<<< HEAD
 //document.write(randomWordCount);
 //document.getElementById("question").innerHTML = randomWord;
 //Question & Answer Generation
@@ -18,19 +17,16 @@ var question1 = "How many times does the word ";
 var question2 = " appear in the test text?";
 var questionTotal = question1.concat(randomWord, question2);
 
-=======
 //Question Number Variables
 var questionCount = 4; //number of questions/ answers generated
 var questionNumber = 0; //current question number (e.g. Question 1, Question 1... etc.)
 var questionBank = []; //array of questions
 var questionAnswers = []; //array of corresponding answers
->>>>>>> 95b970817b46529a15717e8c63ebb1f7f37f51ff
 
 for (j = 0; j < questionCount; j++) {
 
     var randomWord = testTextSplit[Math.floor(Math.random()*testTextSplit.length)];
 
-<<<<<<< HEAD
 function button() {
     var answer = prompt(questionTotal);
     var answer1 = "Correct! The word "
@@ -47,14 +43,12 @@ function button() {
     else {
         document.getElementById("test").innerHTML = answerTotal2;
         document.getElementById("score").innerHTML = ("Your score is " + score);
-=======
     //String Sifter/ Answer assignment
     var randomWordCount = 0;
     for (i = 0; i < testTextSplit.length; i++) { //counts occurences of randomWord
         if (testTextSplit[i] == randomWord) {
             randomWordCount = randomWordCount + 1;
         }
->>>>>>> 95b970817b46529a15717e8c63ebb1f7f37f51ff
     }
     questionAnswers.push(randomWordCount);
 
@@ -72,7 +66,7 @@ function button() {
     //document.getElementById("after").innerHTML = answerTotal;
 
 }
-
+}
 document.getElementById("after").innerHTML = questionBank[questionNumber];
 document.getElementById("test").innerHTML = questionAnswers;
 
@@ -143,4 +137,4 @@ function testdisplay(teststring) {
     
     window.alert(teststring);
     return;
-}
+}}
