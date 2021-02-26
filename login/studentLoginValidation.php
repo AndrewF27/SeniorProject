@@ -18,14 +18,14 @@ $result = mysqli_query($connection, "SELECT * FROM student_login WHERE studentEm
 
 $stmt = $connection -> prepare("SELECT * FROM student_login WHERE studentEmail = ?");
 $stmt -> bind_param('s', $_POST['studentEmail']);
-$stmt = execute();
+$stmt = execute($connection);
 $resultt = $stmt -> get_result();
 $user = $resultt -> fetch_object();
 
 $rows = mysqli_num_rows($result);
 if($rows == 1) {
     $_SESSION['user_id'] = $user -> ID;
-    header("Location: http://retentionapp.club/studentDashboard.html");
+    header("Location: http://retentionapp.club/studentSide/studentDashboard.html");
     echo"Login Successful.";
 }
 else{
