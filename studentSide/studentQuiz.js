@@ -5,6 +5,18 @@ document.getElementById("question").innerHTML = testText;
 
 var testTextSplit = testText.split(" "); //Makes each word in 'testText' an item in an array
 
+function exporttext (exported) {
+testText = exported;
+    return;
+}
+
+//document.write(randomWordCount);
+//document.getElementById("question").innerHTML = randomWord;
+//Question & Answer Generation
+var question1 = "How many times does the word ";
+var question2 = " appear in the test text?";
+var questionTotal = question1.concat(randomWord, question2);
+
 //Question Number Variables
 var questionCount = 4; //number of questions/ answers generated
 var questionNumber = 0; //current question number (e.g. Question 1, Question 1... etc.)
@@ -15,6 +27,22 @@ for (j = 0; j < questionCount; j++) {
 
     var randomWord = testTextSplit[Math.floor(Math.random()*testTextSplit.length)];
 
+function button() {
+    var answer = prompt(questionTotal);
+    var answer1 = "Correct! The word "
+    var answer2 = "Incorrect! The word "
+    var answer3 = " appears "
+    var answer4 = " time(s)!"
+    var answerTotal = answer1.concat(randomWord, answer3, randomWordCount, answer4);
+    var answerTotal2 = answer2.concat(randomWord, answer3, randomWordCount, answer4);
+    if (answer == randomWordCount) {
+        document.getElementById("test").innerHTML = answerTotal;
+        score++;
+        document.getElementById("score").innerHTML = ("Your score is " + score);
+    } 
+    else {
+        document.getElementById("test").innerHTML = answerTotal2;
+        document.getElementById("score").innerHTML = ("Your score is " + score);
     //String Sifter/ Answer assignment
     var randomWordCount = 0;
     for (i = 0; i < testTextSplit.length; i++) { //counts occurences of randomWord
@@ -38,7 +66,7 @@ for (j = 0; j < questionCount; j++) {
     //document.getElementById("after").innerHTML = answerTotal;
 
 }
-
+}
 document.getElementById("after").innerHTML = questionBank[questionNumber];
 document.getElementById("test").innerHTML = questionAnswers;
 
@@ -109,4 +137,4 @@ function testdisplay(teststring) {
     
     window.alert(teststring);
     return;
-}
+}}
