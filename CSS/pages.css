@@ -110,3 +110,12 @@ div.logincontainer > label {
     margin: 8px 0;
     cursor: pointer;
 }
+
+/*Student Dashboard*/
+#quizSpace {
+    background-color: white;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-color: #3D3D3D;
+    text-align: center;
+}
