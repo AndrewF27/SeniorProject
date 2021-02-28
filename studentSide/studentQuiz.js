@@ -1,5 +1,5 @@
 //Input
-var testText = "This is a test test test sentence sentence to test the text text sifting and quiz quiz algorithm creation algorithm";
+var testText = $("#myPhpValue").val();
 
 document.getElementById("question").innerHTML = testText;
 
@@ -84,7 +84,6 @@ else {
 //Page Refreshing
 /*
 var quizActive = 1;
-
 while (quizActive != 1) {
     location.reload()
 }
@@ -133,8 +132,8 @@ function changestring() {
     return;
     }
 
-function testdisplay(teststring) {
+function testdisplay(testing) {
     
-    window.alert(teststring);
+    document.write(testing);
     return;
 }}
