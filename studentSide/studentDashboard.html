@@ -26,12 +26,16 @@
     <p class="topHeader">Quiz Testing</p>
     <p class="subHeader">Quiz in Progress</p>
 
+    <div id="quizHeader">
+        <p id="questionNumber"></p>
+    </div>
+
     <div id="quizSpace">
-        <p id="display"></p>
         <p id="question"></p>
+        <p id="display"></p>
         <p id="response"></p>
     
-        <button onclick="button()">Click here to answer</button>
+        <!--<button onclick="button()">Click here to answer</button>-->
 
         <form>
             <label for="studentAnswer">Submission</label>
@@ -39,6 +43,7 @@
             <input type="number" id="studentAnswer" name="studentAnswer">
             <br>
         </form>
+        <br>
 
         <button onclick="previous()">previous</button>
         <button onclick="next()">next</button>
@@ -52,8 +57,10 @@
 
         <br>
         <p id="checkAnswer"></p>
+        <p id="attendance"></p>
 
-        <button onclick="checkAnswerArray()">checkanswer</button>
+        <button onclick="checkAnswerArray()">Check Entered Answers</button>
+        <button onclick="calculateAttendance()">Attendance Verdict</button>
     </div>
     <script src="studentQuiz.js"></script>
 </body>

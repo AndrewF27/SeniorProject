@@ -113,9 +113,24 @@ div.logincontainer > label {
 
 /*Student Dashboard*/
 #quizSpace {
-    background-color: white;
     margin-left: 20%;
     margin-right: 20%;
-    border-color: #3D3D3D;
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#questionNumber {
+    margin-left: 2%;
+    font-weight: bold;
+    text-align: left;
+    color: #3D3D3D;
+}
+
+#quizHeader {
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: white;
+    border-style: solid;
+    border-color: gray;
+    border-width: 0.1em;
 }
