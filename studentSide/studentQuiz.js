@@ -1,5 +1,6 @@
 //Input
-var testText = $("#myPhpValue").val();
+//var testText = $("#myPhpValue").val();
+var testText = ("This is a test test statement to check the text sifting sifting algortith algorithm sorting stuff stuff algorithm check to stuff");
 
 document.getElementById("display").innerHTML = testText;
 
@@ -137,12 +138,12 @@ function calculateAttendance() {
     scorePercentage = ((score * 10) / (questionCount * 10));
     document.getElementById("attendance").innerHTML = (scorePercentage);
     if ((scorePercentage > 0.5)) {
-        attendance = "is";
+        attendance = "was";
     }
     else {
-        attendance = "isn't";
+        attendance = "wasn't";
     }
-    document.getElementById("attendance").innerHTML = ("User " + attendance + " here");
+    document.getElementById("attendance").innerHTML = ("User's score was " + scorePercentage + " so user " + attendance + " here");
 }
 
 // Rasheed Testing

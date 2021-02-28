@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="../CSS/pages.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 </head>
 
 <meta charset="UTF-8">
