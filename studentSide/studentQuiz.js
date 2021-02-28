@@ -62,8 +62,8 @@ for (j = 0; j < questionCount; j++) {
 }
 
 //displays question corresponding to questionNumber value
-document.getElementById("question").innerHTML = questionBank[questionNumber];
-document.getElementById("response").innerHTML = questionAnswers;
+document.getElementById("question").innerHTML = (questionBank[questionNumber]);
+document.getElementById("response").innerHTML = ("Answer Key: " + questionAnswers);
 //document.write(questionBank);
 
 //Awarding Points
@@ -134,16 +134,17 @@ function calculateAttendance() {
     var attendance;
     var scorePercentage;
 
-    scorePercentage = (score/ questionCount);
+    scorePercentage = ((score * 10) / (questionCount * 10));
     document.getElementById("attendance").innerHTML = (scorePercentage);
-    /*if ((score / questionCount) > 0.5) {
+    if ((scorePercentage > 0.5)) {
         attendance = "is";
     }
     else {
         attendance = "isn't";
     }
-    document.getElementById("attendance").innerHTML = ("User " + attendance + " here");*/
+    document.getElementById("attendance").innerHTML = ("User " + attendance + " here");
 }
+
 // Rasheed Testing
 function changestring() {
     testText = document.getElementById("quiztext").value;
