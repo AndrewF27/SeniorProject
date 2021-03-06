@@ -1,6 +1,12 @@
+<html>
+<body>
 <?php
+$username = "retentionadmin"
+$password = "password"
+$database = "mysql.retentionapp.club"
+
 // Create connection
-$connection = new mysqli ("mysql.retentionapp.club","retentionadmin","R3t3n@dm1n");
+$mysqli = new mysqli ("localhost", $username, $password, $database);
 
 // Check connection
 if ($connection === false) {
@@ -9,35 +15,26 @@ if ($connection === false) {
 
 mysqli_select_db($connection,"retentionapp_login");
 
-$sql = "SELECT scoreID, studentName, quizID, score FROM student_scores";
+$sql = "SELECT * FROM student_scores";
+echo "<b> <center>Student Scores</center> </b> <br> <br>";
 
-if ($result->num_rows > 0) {
-    if($result = $connection->query($sql)){
-        if($result->num_rows > 0){
-            echo "<table>";
-                echo "<tr>";
-                    echo "<th>scoreID</th>";
-                    echo "<th>studentName</th>";
-                    echo "<th>quizID</th>";
-                    echo "<th>score</th>";
-                echo "</tr>";
-            while($row = $result->fetch_array()){
-                echo "<tr>";
-                    echo "<td>" . $row['scoreID'] . "</td>";
-                    echo "<td>" . $row['studentName'] . "</td>";
-                    echo "<td>" . $row['quizID'] . "</td>";
-                    echo "<td>" . $row['score'] . "</td>";
-                echo "</tr>";
-            }
-            echo "</table>";
-            // Free result set
-            $result->free();
-        } else{
-            echo "No records matching your query were found.";
-        }
-} else {
-    echo "ERROR: Could not execute. Please try again $sql. " . $mysqli->error;
+if ($result = $mysqli->query($sql)) {
+    while ($row = $result->fetch_assoc()) {
+        $scoreID = $row["col1"];
+        $studentName = $row["col2"];
+        $quizID = $row["col3"];
+        $score = $row["col4"];
+
+        echo '<b>'.$scoreID.$studentName.'</b><br />';
+        echo $quizID.'<br />';
+        echo $score;
+    }
+    // Free result set
+    $result->free();
+
 }
 
 $connection->close();
 ?>
+</body>
+</html>
