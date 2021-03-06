@@ -1,31 +1,40 @@
+<html>
+<body>
 <?php
-$FirstName = "FirstName";
-$LastName = "LastName";
-$Score = "Score";
+$username = "retentionadmin"
+$password = "password"
+$database = "mysql.retentionapp.club"
 
 // Create connection
-$connection = new mysqli ("mysql.retentionapp.club","retentionadmin","R3t3n@dm1n");
+$mysqli = new mysqli ("localhost", $username, $password, $database);
 
 // Check connection
-if ($connection -> connect_errno) {
-    echo "Failed to connect to MySQL: " . $connection -> connect_error;
-    exit();
+if ($connection === false) {
+    die("ERROR: Could not connect. " . $connection->connect_error);
 }
 
-//select database
 mysqli_select_db($connection,"retentionapp_login");
 
-$sql = "SELECT FirstName, LastName, Score FROM /*Database*/";
+$sql = "SELECT * FROM student_scores";
+echo "<b> <center>Student Scores</center> </b> <br> <br>";
 
-$result = $conn->query($sql);
+if ($result = $mysqli->query($sql)) {
+    while ($row = $result->fetch_assoc()) {
+        $scoreID = $row["col1"];
+        $studentName = $row["col2"];
+        $quizID = $row["col3"];
+        $score = $row["col4"];
 
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo "<br> Name: " . $row["firstname"]. " " . $row["lastname"] . " Score: " . $row["score"]. "<br>";
+        echo '<b>'.$scoreID.$studentName.'</b><br />';
+        echo $quizID.'<br />';
+        echo $score;
     }
-} else {
-    echo "No results found for this name.";
+    // Free result set
+    $result->free();
+
 }
 
+$connection->close();
 ?>
+</body>
+</html>
