@@ -17,10 +17,10 @@ echo "<b> <center>Student Scores</center> </b> <br> <br>";
 
 echo '<table border="0" cellspacing="2" cellpadding="2">
       <tr>
-            <td> <front face="Arial">Value1</front> </td>
-            <td> <front face="Arial">Value2</front> </td>
-            <td> <front face="Arial">Value3</front> </td>
-            <td> <front face="Arial">Value4</front> </td>
+            <td> <front face="Arial">Score ID</front> </td>
+            <td> <front face="Arial">Student Name</front> </td>
+            <td> <front face="Arial">Quiz ID</front> </td>
+            <td> <front face="Arial">Score</front> </td>
         </tr>';
 
 if ($result = $mysqli->query($sql)) {
@@ -30,9 +30,13 @@ if ($result = $mysqli->query($sql)) {
         $quizID = $row["quizID"];
         $score = $row["score"];
 
-        echo '<b>'.$scoreID.$studentName.'</b><br />';
-        echo $quizID.'<br />';
-        echo $score;
+        echo '<tr>
+                <td>'.$scoreID.'</td>
+                <td>'.$studentName.'</td>
+                <td>'.$quizID.'</td>
+                <td>'.$score.'</td>
+             </tr>';
+        
     }
     // Free result set
     $result->free();
