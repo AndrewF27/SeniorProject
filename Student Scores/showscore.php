@@ -1,18 +1,16 @@
-
 <?php
-$username = "retentionadmin"
-$password = "password"
-$database = "mysql.retentionapp.club"
-
 // Create connection
 $mysqli = new mysqli ("mysql.retentionapp.club","retentionadmin","R3t3n@dm1n");
 
 // Check connection
-if ($connection === false) {
-    die("ERROR: Could not connect. " . $connection->connect_error);
+if ($mysqli === false) {
+    die("ERROR: Could not connect. " . $mysqli->connect_error);
 }
 
-mysqli_select_db($connection,"retentionapp_login");
+mysqli_select_db($mysqli,"retentionapp_login");
+
+//select database
+mysqli_select_db($mysqli,"retentionapp_login");
 
 $sql = "SELECT * FROM student_scores";
 echo "<b> <center>Student Scores</center> </b> <br> <br>";
@@ -33,5 +31,5 @@ if ($result = $mysqli->query($sql)) {
 
 }
 
-$connection->close();
+$mysqli->close();
 ?>
