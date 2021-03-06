@@ -6,7 +6,7 @@ $password = "password"
 $database = "mysql.retentionapp.club"
 
 // Create connection
-$mysqli = new mysqli ("localhost", $username, $password, $database);
+$mysqli = new mysqli ("mysql.retentionapp.club","retentionadmin","R3t3n@dm1n");
 
 // Check connection
 if ($connection === false) {

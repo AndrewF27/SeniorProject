@@ -1,6 +1,6 @@
 //Input
-//var testText = $("#myPhpValue").val();
-var testText = ("This is a test test statement to check the text sifting sifting algortith algorithm sorting stuff stuff algorithm check to stuff");
+var testText = $("#myPhpValue").val();
+//var testText = ("This is a test test statement to check the text sifting sifting algortith algorithm sorting stuff stuff algorithm check to stuff");
 
 document.getElementById("display").innerHTML = testText;
 

@@ -50,17 +50,25 @@
             <label for="Quiztext"><b>Quiz Text</b></label>
             <input type="text" placeholder="Enter quiz text" id="quiztext" name="quiztext" required>
 
-            <input type="submit" value="submit" name="submit" onclick="changestring();testdisplay(testText);"></input>
+            <input type="submit" value="submit" name="submit" onclick="changestring();"></input>
 
-
+            
         </div>
     </form>
     <script>
-        testdisplay(testText);
         
     </script>
-    
-    
+    <form actions="" method="POST" action="textDelete.php">
+    <input type="submit" value="deleteText" name="deleteText">
+</form>
+    <?php
+    //if(isset($_POST['delete'])) {
+        //$connection = new mysqli ("mysql.retentionapp.club","retentionadmin","R3t3n@dm1n");
+        //mysqli_select_db($connection,"retentionapp_login");
+        //$delete = mysqli_query("Delete FROM quizStrings");
+        //$connection->close();
+    //}
+        ?>
 </body>
 
 </html>
