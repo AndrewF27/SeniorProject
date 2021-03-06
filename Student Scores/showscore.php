@@ -1,5 +1,4 @@
-<html>
-<body>
+
 <?php
 $username = "retentionadmin"
 $password = "password"
@@ -36,5 +35,3 @@ if ($result = $mysqli->query($sql)) {
 
 $connection->close();
 ?>
-</body>
-</html>
