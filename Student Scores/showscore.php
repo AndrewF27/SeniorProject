@@ -25,10 +25,10 @@ echo '<table border="0" cellspacing="2" cellpadding="2">
 
 if ($result = $mysqli->query($sql)) {
     while ($row = $result->fetch_assoc()) {
-        $scoreID = $row["col1"];
-        $studentName = $row["col2"];
-        $quizID = $row["col3"];
-        $score = $row["col4"];
+        $scoreID = $row["scoreID"];
+        $studentName = $row["studentName"];
+        $quizID = $row["quizID"];
+        $score = $row["score"];
 
         echo '<b>'.$scoreID.$studentName.'</b><br />';
         echo $quizID.'<br />';
