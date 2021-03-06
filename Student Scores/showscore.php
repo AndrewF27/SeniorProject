@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html>
+
 <?php
 // Create connection
 $mysqli = new mysqli ("mysql.retentionapp.club","retentionadmin","R3t3n@dm1n");
@@ -9,11 +12,16 @@ if ($mysqli === false) {
 
 mysqli_select_db($mysqli,"retentionapp_login");
 
-//select database
-mysqli_select_db($mysqli,"retentionapp_login");
-
 $sql = "SELECT * FROM student_scores";
 echo "<b> <center>Student Scores</center> </b> <br> <br>";
+
+echo '<table border="0" cellspacing="2" cellpadding="2">
+      <tr>
+            <td> <front face="Arial">Value1</front> </td>
+            <td> <front face="Arial">Value2</front> </td>
+            <td> <front face="Arial">Value3</front> </td>
+            <td> <front face="Arial">Value4</front> </td>
+        </tr>';
 
 if ($result = $mysqli->query($sql)) {
     while ($row = $result->fetch_assoc()) {
@@ -33,3 +41,6 @@ if ($result = $mysqli->query($sql)) {
 
 $mysqli->close();
 ?>
+
+</body>
+</html>
