@@ -12,7 +12,7 @@ if ($connection -> connect_errno) {
  //select database
   mysqli_select_db($connection,"retentionapp_login");
 
-$sql = "INSERT INTO quiztext (id, quiztext)
+$sql = "INSERT INTO quizStrings (id, quiztext)
 VALUES ('1', '$string')";
 
 if ($connection->query($sql) === TRUE) {
