@@ -1,50 +1,46 @@
-<!DOCTYPE html>
-<html>
 
 <?php
+$output=NULL;
+
+if(isset($_POST['submit'])) {
+
 // Create connection
 $mysqli = new mysqli ("mysql.retentionapp.club","retentionadmin","R3t3n@dm1n");
 
 // Check connection
 if ($mysqli === false) {
     die("ERROR: Could not connect. " . $mysqli->connect_error);
-}
+ }
 
-mysqli_select_db($mysqli,"retentionapp_login");
+ mysqli_select_db($mysqli,"retentionapp_login");
 
-$sql = "SELECT * FROM student_scores";
-echo "<b> <center>Student Scores</center> </b> <br> <br>";
+ $search = $mysqli->real_escape_string($_POST['search']);
 
-echo '<table border="0" cellspacing="2" cellpadding="2">
-      <tr>
-            <td> <front face="Arial">Score ID</front> </td>
-            <td> <front face="Arial">Student Name</front> </td>
-            <td> <front face="Arial">Quiz ID</front> </td>
-            <td> <front face="Arial">Score</front> </td>
-        </tr>';
+ $resultSet = $mysqli->query("SELECT * FROM student_scores WHERE studentName LIKE '%$search%'");
+ echo "<b> <center>Student Scores</center> </b> <br> <br>";
 
-if ($result = $mysqli->query($sql)) {
-    while ($row = $result->fetch_assoc()) {
-        $scoreID = $row["scoreID"];
-        $studentName = $row["studentName"];
-        $quizID = $row["quizID"];
-        $score = $row["score"];
-
-        echo '<tr>
-                <td>'.$scoreID.'</td>
-                <td>'.$studentName.'</td>
-                <td>'.$quizID.'</td>
-                <td>'.$score.'</td>
-             </tr>';
+    if ($resultSet->num_rows > 0) {
+        while ($rows = $resultSet->fetch_assoc() ) {
         
-    }
-    // Free result set
-    $result->free();
+         $scoreID = $rows['scoreID'];
+         $studentName = $rows['studentName'];
+         $quizID = $rows['quizID'];
+         $score = $rows['score'];
 
+         $output .= "<br />Score ID: $scoreID<br />Student Name: $studentName<br />Quiz ID: $quizID<br />Score: $score<br /><br />";
+        
+        }
+    } else {
+        $output = "No results";
+    }
 }
 
-$mysqli->close();
 ?>
 
-</body>
-</html>
+<form method="POST">
+<input type="TEXT" name="search" />
+<input type="SUBMIT" name="submit" value="Search" />
+</form>
+
+<?php echo $output; ?>
+
