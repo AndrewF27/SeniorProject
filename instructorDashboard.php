@@ -10,11 +10,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <nav class="templateheader">
-
-    <a href="#RetentionApp" class="Homebutton">
-        <div class="buttontext">RetentionApp</div>
-    </a>
-
+  <ul>
+    <li><a href="http://retentionapp.club/" class="Homebutton"><div class="buttontext">RetentionApp</div></a></li>
+    
+    <li><a href="http://retentionapp.club/Student_Scores/showscore.php" class="Scores"><div class="buttontext">Student Scores</div></a></li>
+</ul>
 </nav>
 
 <body>
@@ -50,7 +50,7 @@
             <label for="Quiztext"><b>Quiz Text</b></label>
             <input type="text" placeholder="Enter quiz text" id="quiztext" name="quiztext" required>
 
-            <input type="submit" value="submit" name="submit" onclick="changestring();"></input>
+            <input type="submit" value="Submit" name="submit" onclick="changestring();"></input>
 
             
         </div>
@@ -59,7 +59,8 @@
         
     </script>
     <form actions="" method="POST" action="textDelete.php">
-    <input type="submit" value="deleteText" name="deleteText">
+    <label for="deleteText"><b>Reset Quiz</b></label>
+    <input type="submit" value="Reset" name="deleteText">
 </form>
     <?php
     //if(isset($_POST['delete'])) {

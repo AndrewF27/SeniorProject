@@ -15,7 +15,7 @@ $importCheck = mysqli_num_rows($importedtext);
 if ($importCheck > 0) {
     while ($row = mysqli_fetch_assoc($importedtext)) {
         $testest = $row['quiztext'];
- echo $testest;
+ //echo $testest;
  
     }
 }
@@ -28,7 +28,7 @@ if ($importCheck > 0) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <nav class="templateheader">
   <ul>
-    <li><a href="#RetentionApp" class="Homebutton"><div class="buttontext">RetentionApp</div></a></li>
+    <li><a href="http://retentionapp.club/" class="Homebutton"><div class="buttontext">RetentionApp</div></a></li>
     
     <li><a href="login/login.html" class="Login"><div class="buttontext">Login</div></a></li>
 </ul>
@@ -145,7 +145,7 @@ for (j = 0; j < questionCount; j++) {
 
 //displays question corresponding to questionNumber value
 document.getElementById("question").innerHTML = (questionBank[questionNumber]);
-document.getElementById("response").innerHTML = ("Answer Key: " + questionAnswers);
+//document.getElementById("response").innerHTML = ("Answer Key: " + questionAnswers);
 //document.write(questionBank);
 
 //Awarding Points

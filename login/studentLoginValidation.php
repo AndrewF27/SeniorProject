@@ -16,16 +16,18 @@ if ($connection -> connect_errno) {
 
 $result = mysqli_query($connection, "SELECT * FROM student_login WHERE studentEmail = '$email' and studentPass = '$pass'");
 
+/*
 $stmt = $connection -> prepare("SELECT * FROM student_login WHERE studentEmail = ?");
 $stmt -> bind_param('s', $_POST['studentEmail']);
 $stmt = execute($connection);
 $resultt = $stmt -> get_result();
-$user = $resultt -> fetch_object();
+$user = $result -> fetch_object();
+*/
 
 $rows = mysqli_num_rows($result);
 if($rows == 1) {
-    $_SESSION['user_id'] = $user -> ID;
-    header("Location: http://retentionapp.club/studentSide/studentDashboard.html");
+    //$_SESSION['user_id'] = $user -> ID;
+    header("Location: http://retentionapp.club/studentSide/studentDashboard.php");
     echo"Login Successful.";
 }
 else{

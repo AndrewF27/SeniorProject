@@ -68,25 +68,33 @@ p.column {
 }
 
 /*loginpages*/
+.loginAll {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 60%;
+    margin-left: 30%;
+}
 
-div.logIcon {
-    width: 33.3%;
+/*login icon formatting*/
+.logIcon {
+    width: 20%;
     height: auto;
     display: inline-block;
 }
 
 #nonIcon {
-    width: 15%;
+    width: 20%;
     height: auto;
 }
 
 #selectedIcon {
-    width: 50%;
+    width: 65%;
     height: auto;
 }
 
+/*login field formatting*/
 div.logincontainer {
-    width:10%;
+    width: 40%;
     height: auto;
     display: inline-block;
 }
@@ -95,7 +103,7 @@ div.logincontainer > input {
     width: 100%;
     color: rgb(0, 0, 0);
     padding: 14px 20px;
-    border: none;
+    border: 1em;
     border-radius: 4px;
     margin: 8px 0;
     cursor: pointer;
@@ -110,6 +118,7 @@ div.logincontainer > label {
     margin: 8px 0;
     cursor: pointer;
 }
+*/
 
 /*Student Dashboard*/
 #quizSpace {
