@@ -16,7 +16,7 @@ if ($mysqli === false) {
 
  $search = $mysqli->real_escape_string($_POST['search']);
 
- $resultSet = $mysqli->query("SELECT * FROM student_scores WHERE studentName LIKE '%$search%'");
+ $resultSet = $mysqli->query("SELECT * FROM student_scores WHERE studentName LIKE '%$search%' OR scoreID LIKE '%$search%'");
  echo "<b> <center>Student Scores</center> </b> <br> <br>";
 
     if ($resultSet->num_rows > 0) {
