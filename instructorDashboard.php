@@ -10,11 +10,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <nav class="templateheader">
-
-    <a href="#RetentionApp" class="Homebutton">
-        <div class="buttontext">RetentionApp</div>
-    </a>
-
+  <ul>
+    <li><a href="http://retentionapp.club/" class="Homebutton"><div class="buttontext">RetentionApp</div></a></li>
+    
+    <li><a href="http://retentionapp.club/Student_Scores/showscore.php" class="Scores"><div class="buttontext">Student Scores</div></a></li>
+</ul>
 </nav>
 
 <body>
