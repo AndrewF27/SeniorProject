@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <head>
         <link rel="stylesheet" href="../CSS/template.css">
         <link rel="stylesheet" href="../CSS/pages.css">
+=======
+<html>
+<body>
+
+<b>Search for Student Scores by Student Name or Score ID</b>
+>>>>>>> b725185c2678c7ac283e1785f7e214789a03a411
 
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -66,4 +73,9 @@ if ($mysqli === false) {
 
 <?php echo $output; ?>
 
+<<<<<<< HEAD
 <html>
+=======
+</body>
+</html>
+>>>>>>> b725185c2678c7ac283e1785f7e214789a03a411
