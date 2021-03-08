@@ -11,7 +11,7 @@
         $delete = "DELETE FROM quizStrings";
 
         if ($connection->query($delete) === TRUE) {
-            echo "Quiz Deleted Successfully";
+            echo "Quiz Reset Successfully";
           } else {
             echo "Error: " . $delete . "<br>" . $connection->error;
           }

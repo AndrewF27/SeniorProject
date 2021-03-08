@@ -50,7 +50,7 @@
             <label for="Quiztext"><b>Quiz Text</b></label>
             <input type="text" placeholder="Enter quiz text" id="quiztext" name="quiztext" required>
 
-            <input type="submit" value="submit" name="submit" onclick="changestring();"></input>
+            <input type="submit" value="Submit" name="submit" onclick="changestring();"></input>
 
             
         </div>
@@ -59,7 +59,8 @@
         
     </script>
     <form actions="" method="POST" action="textDelete.php">
-    <input type="submit" value="deleteText" name="deleteText">
+    <label for="deleteText"><b>Reset Quiz</b></label>
+    <input type="submit" value="Reset" name="deleteText">
 </form>
     <?php
     //if(isset($_POST['delete'])) {
