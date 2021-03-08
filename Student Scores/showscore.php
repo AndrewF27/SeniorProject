@@ -1,4 +1,26 @@
+<!DOCTYPE html>
+<head>
+        <link rel="stylesheet" href="../CSS/template.css">
+        <link rel="stylesheet" href="../CSS/pages.css">
 
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<nav class="templateheader">
+  <ul>
+    <li><a href="http://retentionapp.club/" class="Homebutton"><div class="buttontext">RetentionApp</div></a></li>
+    
+    <li><a href="http://retentionapp.club/instructorDashboard.php" class="InsDashboard"><div class="buttontext">Instructor Dashboard</div></a></li>
+
+</ul>
+</nav>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <?php
 $output=NULL;
 
@@ -16,7 +38,7 @@ if ($mysqli === false) {
 
  $search = $mysqli->real_escape_string($_POST['search']);
 
- $resultSet = $mysqli->query("SELECT * FROM student_scores WHERE studentName LIKE '%$search%' OR scoreID LIKE '%$search%'");
+ $resultSet = $mysqli->query("SELECT * FROM student_scores WHERE studentName LIKE '%$search%' OR quizID LIKE '%$search%'");
  echo "<b> <center>Student Scores</center> </b> <br> <br>";
 
     if ($resultSet->num_rows > 0) {
@@ -44,3 +66,4 @@ if ($mysqli === false) {
 
 <?php echo $output; ?>
 
+<html>
