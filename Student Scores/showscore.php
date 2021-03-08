@@ -1,3 +1,7 @@
+<html>
+<body>
+
+<b>Search for Student Scores by Student Name or Score ID</b>
 
 <?php
 $output=NULL;
@@ -44,3 +48,5 @@ if ($mysqli === false) {
 
 <?php echo $output; ?>
 
+</body>
+</html>
