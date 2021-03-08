@@ -15,7 +15,7 @@ $importCheck = mysqli_num_rows($importedtext);
 if ($importCheck > 0) {
     while ($row = mysqli_fetch_assoc($importedtext)) {
         $testest = $row['quiztext'];
- echo $testest;
+ //echo $testest;
  
     }
 }
@@ -145,7 +145,7 @@ for (j = 0; j < questionCount; j++) {
 
 //displays question corresponding to questionNumber value
 document.getElementById("question").innerHTML = (questionBank[questionNumber]);
-document.getElementById("response").innerHTML = ("Answer Key: " + questionAnswers);
+//document.getElementById("response").innerHTML = ("Answer Key: " + questionAnswers);
 //document.write(questionBank);
 
 //Awarding Points
