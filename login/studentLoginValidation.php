@@ -25,7 +25,7 @@ $user = $resultt -> fetch_object();
 $rows = mysqli_num_rows($result);
 if($rows == 1) {
     $_SESSION['user_id'] = $user -> ID;
-    header("Location: http://retentionapp.club/studentSide/studentDashboard.html");
+    header("Location: http://retentionapp.club/studentSide/studentDashboard.php");
     echo"Login Successful.";
 }
 else{
